@@ -1,4 +1,5 @@
- import mongoose, {Schema} from mongoose ;
+ import mongoose from "mongoose" ;
+ import { Schema } from "mongoose";
 
  import jwt from "jsonwebtoken";
  import bcrypt from "bcrypt";
@@ -37,10 +38,10 @@
         type : String,
 
     },
-    watchHistory : {
+    watchHistory :[ {
         type : Schema.Types.ObjectId,
         ref : "Video"
-    },
+    }],
     password : {
         type : String,
         required : [true , "Password is required"]
@@ -99,4 +100,4 @@
  }
 
 
- export const User = mongoose.model(mongoose.model("User", userSchema))
+ export const User =mongoose.model("User", userSchema)
