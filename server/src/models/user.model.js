@@ -35,7 +35,7 @@
 
     },
     coverImage : {
-        type : String,
+        type : String, //cloudinary url
 
     },
     watchHistory :[ {
